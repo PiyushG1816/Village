@@ -1,7 +1,7 @@
 import requests
 
 # Your Google Places API Key
-API_KEY = "AlzaSyOkCF76M9c-wt5IswyxUxpeJuKRYZdgPSB"
+API_KEY = "Your_API"
 
 # Address latitude and longitude (can be derived from a geocoding API)
 latitude = 40.7665  # Latitude for 11 W Marie St, Hicksville, NY
@@ -10,7 +10,7 @@ radius = 2000  # 2 km radius
 keyword = "South Indian food"
 
 # Google Places API Nearby Search Endpoint
-url = f"https://maps.gomaps.pro/maps/api/place/nearbysearch/json?location={latitude},{longitude}&radius={radius}&keyword={keyword}&key={API_KEY}"
+url = f"https://maps.google.com/maps/api/place/nearbysearch/json?location={latitude},{longitude}&radius={radius}&keyword={keyword}&key={API_KEY}"
 
 # Send request
 response = requests.get(url)
