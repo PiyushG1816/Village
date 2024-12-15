@@ -1,7 +1,7 @@
 import requests
 
 # Your Google Places API Key
-API_KEY = "Your_API"
+API_KEY = "Your_API_Key"
 
 # Address latitude and longitude (can be derived from a geocoding API)
 latitude = 40.7665  # Latitude for 11 W Marie St, Hicksville, NY
