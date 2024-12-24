@@ -42,7 +42,7 @@ def index():
     time_slots = busy_df.columns.tolist()
     # Get current temperature
     city = "Hicksville"  # Replace with your restaurant's city
-    api_key = "125893d0d74c6bda2b6a9c9abdd7f8ef"  # Replace with your API key
+    api_key = "Your_api_key"  # Replace with your API key
     temperature = get_current_temperature(api_key, city)
 
     return render_template(
