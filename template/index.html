@@ -60,15 +60,17 @@
 
         // Data passed from Flask as a JSON object
         // Debug: Check busyTimings and timeSlots in console
+        const busyTimings = {{ busy_timings|tojson }};
+        const timeSlots = {{ time_slots|tojson }};
         console.log("Busy Timings Data:", busyTimings);
         console.log("Time Slots Data:", timeSlots);
 
 // Generate a chart for each day
-        const days = Object.keys(busyTimings);
-        days.forEach((day, index) => {
-            const ctx = document.getElementById(`chart-${index + 1}`);
-            if (ctx) {
-                new Chart(ctx.getContext('2d'), {
+       Object.keys(busyTimings).forEach((day, index) => {
+            const canvas = document.getElementById(`chart-${index}`);
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                new Chart(ctx, {
                     type: 'bar',
                     data: {
                         labels: timeSlots,
